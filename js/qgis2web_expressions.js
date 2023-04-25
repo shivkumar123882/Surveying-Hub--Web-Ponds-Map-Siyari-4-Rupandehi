@@ -754,3 +754,30 @@ function fnc__specialcol_(values, context) {
 function fnc_project_color(values, context) {
     return false;
 };
+
+
+
+function exp_points_1rule0_eval_expression(context) {
+    // "type" = 'school'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['type']  == 'school');
+    } else {
+        return (feature['type']  == 'school');
+    }
+}
+
+
+function exp_points_1rule1_eval_expression(context) {
+    // "type" = 'clinic'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['type']  == 'clinic');
+    } else {
+        return (feature['type']  == 'clinic');
+    }
+}
